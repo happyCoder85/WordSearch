@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jon's Math App</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <header class="bg-primary"> 
+        <div class="header-logo">
+            <a href="https://jonspurling.ca">
+                <img id="banner-logo" src="../static/js-logo.png" alt="JavaScript logo used to reference Jonathan Spurling">
+            </a>
+        </div>
+        <div class="nav-container">
+            <ul class="menu">
+                <li><a class="menuItem" href="https://jonspurling.ca#about">About</a></li>
+                <li><a class="menuItem" href="https://jonspurling.ca#projects">Projects</a></li>
+                <li><a class="menuItem" href="https://jonspurling.ca#resume" >Resume</a></li>
+                <li><a class="menuItem" href="https://jonspurling.ca#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger">
+                <!-- material icons https://material.io/resources/icons/ -->
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <h1>Jon's Word Search</h1>
+        
+        <h2>Here are your results:</h2>
+           
+        <div id="container">
+            <p>Your letters searched: {{letters}}</p>
+            <p>Your phrase searched: {{phrase}}</p>
+            <p>Your results: {{result}}</p>
+        </div>
+        <a class="back" href="/">New Search</a>
+        <a class="other-projects" href="https://jonspurling.ca#projects">See my other projects</a>
+    </main>
+    <footer class="bg-primary">
+        <p>&copy; 2024 - Jonathan Spurling</p>
+    </footer>
+</body>
+</html>
